@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">jogo_do_dado</string>
+    <string name="jogar">Jogar</string>
+
+</resources>
