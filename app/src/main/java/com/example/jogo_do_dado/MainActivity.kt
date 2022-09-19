@@ -3,6 +3,7 @@ package com.example.jogo_do_dado
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 
@@ -20,8 +21,17 @@ class MainActivity : AppCompatActivity() {
     private fun jogarDado() {
         val dado = Dado(numeroLados = 6)
         val jogaDado = dado.jogar()
-        val resultTextView: TextView = findViewById(R.id.textView)
-        resultTextView.text = jogaDado.toString()
+
+        val imagemDado: ImageView = findViewById(R.id.imageView)
+         when (jogaDado){
+             1 -> imagemDado.setImageResource(R.drawable.dado_1)
+             2 -> imagemDado.setImageResource(R.drawable.dado_2)
+             3 -> imagemDado.setImageResource(R.drawable.dado_3)
+             4 -> imagemDado.setImageResource(R.drawable.dado_4)
+             5 -> imagemDado.setImageResource(R.drawable.dado_5)
+             6 -> imagemDado.setImageResource(R.drawable.dado_6)
+
+         }
     }
 }
 
